@@ -1,0 +1,181 @@
+@font-face {
+  font-family: 'minecraft';
+  src: url("./assets/minecraft_font.otf");
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'minecraft';
+  user-select: none;
+}
+
+html {
+  background: #3c3c3c;
+}
+
+.section{
+  height: 100vh;
+  background-color: blueviolet;
+
+}
+.puntajes{
+  height: 20vh;
+  display: flex;/*elemento al lado del otro*/
+  justify-content: space-around;
+  align-items: center;
+}
+.puntajes h2{
+  font-size: 25px;
+  color: #c3c3c3;
+}
+.puntajes p{
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  color: #c3c3c3;
+
+}
+.tablero{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  transition: opacity 0.5s ease0.5s;
+}
+
+.manos{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.manos img{
+  width: 225px;
+}
+
+.tablero button{
+  width: 125px;
+  height: 75px;
+  border-style: solid;
+  border-width: 4px;
+  border-color: blueviolet;
+  border-radius: 10%;
+  cursor: pointer;
+  background-color: #c3c3c3;
+}
+.tablero button img{
+  height: 40px;
+}
+.tablero button:hover{
+  background-color: cadetblue;
+}
+.tablero button:focus{
+  outline: 0;
+}
+.opciones{
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+.resultado{
+  text-align: center;
+  font-size:25px ;
+  margin-bottom: 1rem;
+  color: #c3c3c3;
+}
+
+.final{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.Jugando .mano-usuario {
+  animation: shakeUno 2s ease;
+}
+
+.Jugando .mano-computador {
+  animation: shakeDos 2s ease;
+}
+
+@media only screen and (max-width:768px) {
+  .manos img{
+      width: 150px;
+  }
+  .puntajes{
+      font-size: 18px;
+  }
+  .resultado{
+      font-size: 28px;
+  }
+  .tablero button{
+      width: 80px;
+      height: 80px;
+  }
+  .tablero button img{
+      height: 40px;
+  }
+}
+@keyframes shakeUno {
+  0%{
+    transform: translateY(0px);
+  }
+  15% {
+    transform: translateY(-25px);
+  }
+  25% {
+    transform: translateY(0px);
+  }
+  35% {
+    transform: translateY(-25px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  65% {
+    transform: translateY(-25px);
+  }
+  75% {
+    transform: translateY(0px);
+  }
+  85% {
+    transform: rotate(25deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes shakeDos {
+  0%{
+    transform: translateY(0px);
+  }
+  15% {
+    transform: translateY(-25px);
+  }
+  25% {
+    transform: translateY(0px);
+  }
+  35% {
+    transform: translateY(-25px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  65% {
+    transform: translateY(-25px);
+  }
+  75% {
+    transform: translateY(0px);
+  }
+  85% {
+    transform: rotate(-25deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
